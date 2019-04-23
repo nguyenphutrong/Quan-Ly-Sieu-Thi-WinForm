@@ -34,5 +34,20 @@ namespace CRM02
 
             return list;
         }
+
+        public List<ClassDonHang> LoadDanhSachDonHangTheoKH(string MaKH)
+        {
+            List<ClassDonHang> list = new List<ClassDonHang>();
+
+            string query = "select * from donhang where makhachhang ='" + MaKH +"'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                list.Add(new ClassDonHang(item));
+            }
+
+            return list;
+        }
     }
 }
