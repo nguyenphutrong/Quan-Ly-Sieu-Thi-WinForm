@@ -45,9 +45,7 @@ namespace CRM02
             matkhau = BitConverter.ToString(hashData);
 
             string query = "select * from nguoidung where tendangnhap='" + tendangnhap + "' and matkhau='" + matkhau + "'";         
-
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
-
             return result.Rows.Count > 0;
         }
 

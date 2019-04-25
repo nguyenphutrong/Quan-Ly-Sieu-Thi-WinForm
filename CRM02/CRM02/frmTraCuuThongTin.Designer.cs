@@ -37,7 +37,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPageThongTin = new System.Windows.Forms.TabPage();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.labelDiemThuong = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
             this.labelHoTen = new System.Windows.Forms.Label();
             this.tabPageDonHang = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBoxTieuChi = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControlMain.SuspendLayout();
@@ -135,11 +135,10 @@
             this.tabControlMain.SelectedIndex = 0;
             this.tabControlMain.Size = new System.Drawing.Size(989, 385);
             this.tabControlMain.TabIndex = 14;
-            this.tabControlMain.Visible = false;
             // 
             // tabPageThongTin
             // 
-            this.tabPageThongTin.Controls.Add(this.label7);
+            this.tabPageThongTin.Controls.Add(this.textBoxTieuChi);
             this.tabPageThongTin.Controls.Add(this.label6);
             this.tabPageThongTin.Controls.Add(this.panel3);
             this.tabPageThongTin.Location = new System.Drawing.Point(4, 26);
@@ -150,20 +149,11 @@
             this.tabPageThongTin.Text = "Thông tin của tôi";
             this.tabPageThongTin.UseVisualStyleBackColor = true;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(259, 46);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 17);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "N/A";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(255, 21);
+            this.label6.Location = new System.Drawing.Point(284, 22);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(257, 21);
             this.label6.TabIndex = 15;
@@ -174,15 +164,16 @@
             this.panel3.Controls.Add(this.labelDiemThuong);
             this.panel3.Controls.Add(this.labelHang);
             this.panel3.Controls.Add(this.labelHoTen);
-            this.panel3.Location = new System.Drawing.Point(8, 6);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(219, 291);
+            this.panel3.Size = new System.Drawing.Size(275, 349);
             this.panel3.TabIndex = 14;
             // 
             // labelDiemThuong
             // 
             this.labelDiemThuong.AutoSize = true;
-            this.labelDiemThuong.Location = new System.Drawing.Point(21, 85);
+            this.labelDiemThuong.Location = new System.Drawing.Point(18, 88);
             this.labelDiemThuong.Name = "labelDiemThuong";
             this.labelDiemThuong.Size = new System.Drawing.Size(114, 17);
             this.labelDiemThuong.TabIndex = 11;
@@ -191,7 +182,7 @@
             // labelHang
             // 
             this.labelHang.AutoSize = true;
-            this.labelHang.Location = new System.Drawing.Point(21, 54);
+            this.labelHang.Location = new System.Drawing.Point(18, 54);
             this.labelHang.Name = "labelHang";
             this.labelHang.Size = new System.Drawing.Size(136, 17);
             this.labelHang.TabIndex = 10;
@@ -231,6 +222,20 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(975, 349);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // textBoxTieuChi
+            // 
+            this.textBoxTieuChi.BackColor = System.Drawing.Color.White;
+            this.textBoxTieuChi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTieuChi.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBoxTieuChi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTieuChi.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBoxTieuChi.Location = new System.Drawing.Point(278, 57);
+            this.textBoxTieuChi.Multiline = true;
+            this.textBoxTieuChi.Name = "textBoxTieuChi";
+            this.textBoxTieuChi.ReadOnly = true;
+            this.textBoxTieuChi.Size = new System.Drawing.Size(700, 295);
+            this.textBoxTieuChi.TabIndex = 16;
             // 
             // frmTraCuuThongTin
             // 
@@ -274,7 +279,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TabControl tabControlMain;
         private System.Windows.Forms.TabPage tabPageThongTin;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label labelDiemThuong;
@@ -282,5 +286,6 @@
         private System.Windows.Forms.Label labelHoTen;
         private System.Windows.Forms.TabPage tabPageDonHang;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textBoxTieuChi;
     }
 }

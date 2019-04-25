@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CRM02
 {
@@ -43,6 +44,27 @@ namespace CRM02
             }
             return new ClassKhachHang(data.Rows[0]);
         }
+
+        public bool XoaKhachHang(string id)
+        {
+            string query = "delete from KhachHang where makhachhang='" + id + "'";
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
+        public bool ThemKhachHang(ClassKhachHang kh)
+        {
+            string query = String.Format("insert into KhachHang values('{0}',N'{1}','{2}',N'{3}','{4}','{5}','{6}','{7}')", kh.MaKH, kh.HoTen, kh.NgaySinh,kh.DiaChi,kh.DienThoai,kh.DiemThuong,kh.HangThanhVien,kh.NgayDK);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+        public bool SuaKhachHang(ClassKhachHang kh)
+        {
+            string query = String.Format("update KhachHang set hoten=N'{0}', ngaysinh='{1}',diachi='N{2}',dienthoai='{3}' where makhachhang='{4}'", kh.HoTen, kh.NgaySinh, kh.DiaChi, kh.DienThoai,kh.MaKH);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
 
     }
 }

@@ -14,8 +14,22 @@ namespace CRM02
     {
         public frmTraCuuThongTin()
         {
-            InitializeComponent();
+            InitializeComponent();           
+            HienThiTieuChiThangHang();
+            ClearText();
         }
+
+        private void HienThiTieuChiThangHang()
+        {
+            List<ClassHangThanhVien> list = ClassDSHangThanhVien.Intance.LoadDanhSachHangTV();
+            textBoxTieuChi.Text = "";
+            foreach (ClassHangThanhVien item in list)
+            {                
+                textBoxTieuChi.Text += item.TenHang + ":\r\n      " + item.Dklenhang + "\r\n";
+            }
+            textBoxTieuChi.Visible = true;
+        }
+
         private void LoadDataDonHang(string MaKH)
         {
             List<ClassDonHang> list = ClassQuanLyDonHang.Intance.LoadDanhSachDonHangTheoKH(MaKH);
@@ -44,19 +58,25 @@ namespace CRM02
                 if(khachhang == null)
                 {
                     MessageBox.Show("Không tìm thấy!", "Thông báo");
-                    tabControlMain.Visible = false;
+                    ClearText();
                 }
                 else
                 {
-                    tabControlMain.Visible = true;
                     labelHoTen.Text = khachhang.HoTen.ToUpper();
-                    labelHang.Text = "Hạng thành viên: "+ khachhang.HangThanhVien;
+                    labelHang.Text = "Hạng thành viên: " + ClassDSHangThanhVien.Intance.getDataById(khachhang.HangThanhVien).TenHang;
                     labelDiemThuong.Text = "Điểm thưởng: " + khachhang.DiemThuong.ToString();
-
                     LoadDataDonHang(khachhang.MaKH.ToString());
                 }
 
             }
+        }
+
+        private void ClearText()
+        {
+            labelHoTen.Text = "";
+            labelHang.Text = "";
+            labelDiemThuong.Text = "";
+            dataGridView1.DataSource = null;
         }
     }
 }

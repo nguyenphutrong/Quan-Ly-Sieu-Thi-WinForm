@@ -31,23 +31,24 @@ namespace CRM02
                 MessageBox.Show("Bạn chưa nhập đầy đủ thông tin","Thông báo");
         
             }
-            else if (Login(tendangnhap, matkhau))
-            {
-                frmMain frm = new frmMain();
-                clearTextBox();
-                this.Hide();
-                frm.ShowDialog();
-                this.Show();
-            }
-            else
-            {
-                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu", "Thông báo");
-                textBoxTenDanhNhap.Focus();
-            }
+            else 
+                if (DangNhap(tendangnhap, matkhau))
+                {
+                    frmMain frm = new frmMain();
+                    clearTextBox();
+                    this.Hide();
+                    frm.ShowDialog();
+                    this.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu", "Thông báo");
+                    textBoxTenDanhNhap.Focus();
+                }
 
         }
 
-        private bool Login(string tendangnhap, string matkhau)
+        private bool DangNhap(string tendangnhap, string matkhau)
         {
             return ClassQuanLyNhanVien.Intance.DangNhap(tendangnhap,matkhau);
         }

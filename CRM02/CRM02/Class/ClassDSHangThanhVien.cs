@@ -35,5 +35,21 @@ namespace CRM02
 
             return list;
         }
+
+        public ClassHangThanhVien getDataById(string id)
+        {
+            ClassHangThanhVien item = new ClassHangThanhVien();               
+            string query = "select * from hangthanhvien where mahang='" + id + "'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            if (data.Rows.Count > 0)
+            {
+                item =  new ClassHangThanhVien(data.Rows[0]);
+            }
+
+            return item;
+        }
+
+
     }
 }

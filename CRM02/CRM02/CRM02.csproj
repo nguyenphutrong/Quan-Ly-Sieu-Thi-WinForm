@@ -47,17 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassDonHang.cs" />
-    <Compile Include="ClassDSHangThanhVien.cs" />
-    <Compile Include="ClassHangThanhVien.cs" />
-    <Compile Include="ClassKhachHang.cs" />
-    <Compile Include="ClassNhanVien.cs" />
-    <Compile Include="ClassQuanLyDonHang.cs" />
-    <Compile Include="ClassQuanLyKhachHang.cs" />
-    <Compile Include="ClassQuanLyNhanVien.cs" />
-    <Compile Include="ClassQuanLySanPham.cs" />
-    <Compile Include="ClassSanPham.cs" />
-    <Compile Include="DataProvider.cs" />
+    <Compile Include="Class\ClassDonHang.cs" />
+    <Compile Include="Class\ClassDSHangThanhVien.cs" />
+    <Compile Include="Class\ClassHangThanhVien.cs" />
+    <Compile Include="Class\ClassKhachHang.cs" />
+    <Compile Include="Class\ClassNhanVien.cs" />
+    <Compile Include="Class\ClassQuanLyDonHang.cs" />
+    <Compile Include="Class\ClassQuanLyKhachHang.cs" />
+    <Compile Include="Class\ClassQuanLyNhanVien.cs" />
+    <Compile Include="Class\ClassQuanLySanPham.cs" />
+    <Compile Include="Class\ClassSanPham.cs" />
+    <Compile Include="Class\DataProvider.cs" />
     <Compile Include="frmHangThanhVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +81,12 @@
     </Compile>
     <Compile Include="frmSanPham.designer.cs">
       <DependentUpon>frmSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemKhachHang.Designer.cs">
+      <DependentUpon>frmThemKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTraCuuThongTin.cs">
       <SubType>Form</SubType>
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSanPham.resx">
       <DependentUpon>frmSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemKhachHang.resx">
+      <DependentUpon>frmThemKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTraCuuThongTin.resx">
       <DependentUpon>frmTraCuuThongTin.cs</DependentUpon>
