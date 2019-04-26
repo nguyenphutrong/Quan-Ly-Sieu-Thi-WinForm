@@ -60,7 +60,7 @@ namespace CRM02
         }
         public bool SuaKhachHang(ClassKhachHang kh)
         {
-            string query = String.Format("update KhachHang set hoten=N'{0}', ngaysinh='{1}',diachi='N{2}',dienthoai='{3}' where makhachhang='{4}'", kh.HoTen, kh.NgaySinh, kh.DiaChi, kh.DienThoai,kh.MaKH);
+            string query = String.Format("update KhachHang set hoten=N'{0}', ngaysinh='{1}',diachi=N'{2}',dienthoai='{3}' where makhachhang='{4}'", kh.HoTen, kh.NgaySinh, kh.DiaChi, kh.DienThoai,kh.MaKH);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }

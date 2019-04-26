@@ -34,6 +34,8 @@ namespace CRM02
             else 
                 if (DangNhap(tendangnhap, matkhau))
                 {
+                    Properties.Settings.Default.LoginUser = tendangnhap;
+                    Properties.Settings.Default.Save();
                     frmMain frm = new frmMain();
                     clearTextBox();
                     this.Hide();

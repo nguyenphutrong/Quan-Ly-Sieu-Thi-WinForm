@@ -127,11 +127,11 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.LightGray;
-            this.label5.Location = new System.Drawing.Point(104, 89);
+            this.label5.Location = new System.Drawing.Point(67, 89);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(234, 32);
+            this.label5.Size = new System.Drawing.Size(309, 32);
             this.label5.TabIndex = 10;
-            this.label5.Text = "SIÊU THỊ WALCOOL";
+            this.label5.Text = "WALCOOL SUPERMARKET";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
@@ -163,7 +163,7 @@
             // 
             // buttonSignUp
             // 
-            this.buttonSignUp.BackColor = System.Drawing.Color.Silver;
+            this.buttonSignUp.BackColor = System.Drawing.Color.DarkGray;
             this.buttonSignUp.FlatAppearance.BorderSize = 0;
             this.buttonSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSignUp.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -220,7 +220,7 @@
             // 
             // buttonLogin
             // 
-            this.buttonLogin.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(66)))), ((int)(((byte)(93)))));
             this.buttonLogin.FlatAppearance.BorderSize = 0;
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

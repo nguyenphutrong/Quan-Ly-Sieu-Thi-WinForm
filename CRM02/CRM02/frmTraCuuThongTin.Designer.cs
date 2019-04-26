@@ -37,6 +37,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPageThongTin = new System.Windows.Forms.TabPage();
+            this.textBoxTieuChi = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.labelDiemThuong = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@
             this.labelHoTen = new System.Windows.Forms.Label();
             this.tabPageDonHang = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBoxTieuChi = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControlMain.SuspendLayout();
@@ -59,7 +59,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(307, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(375, 37);
@@ -68,7 +68,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(197)))), ((int)(((byte)(195)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(66)))), ((int)(((byte)(93)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -149,6 +149,20 @@
             this.tabPageThongTin.Text = "Thông tin của tôi";
             this.tabPageThongTin.UseVisualStyleBackColor = true;
             // 
+            // textBoxTieuChi
+            // 
+            this.textBoxTieuChi.BackColor = System.Drawing.Color.White;
+            this.textBoxTieuChi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTieuChi.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBoxTieuChi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTieuChi.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBoxTieuChi.Location = new System.Drawing.Point(278, 57);
+            this.textBoxTieuChi.Multiline = true;
+            this.textBoxTieuChi.Name = "textBoxTieuChi";
+            this.textBoxTieuChi.ReadOnly = true;
+            this.textBoxTieuChi.Size = new System.Drawing.Size(700, 295);
+            this.textBoxTieuChi.TabIndex = 16;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -222,20 +236,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(975, 349);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // textBoxTieuChi
-            // 
-            this.textBoxTieuChi.BackColor = System.Drawing.Color.White;
-            this.textBoxTieuChi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxTieuChi.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBoxTieuChi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTieuChi.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBoxTieuChi.Location = new System.Drawing.Point(278, 57);
-            this.textBoxTieuChi.Multiline = true;
-            this.textBoxTieuChi.Name = "textBoxTieuChi";
-            this.textBoxTieuChi.ReadOnly = true;
-            this.textBoxTieuChi.Size = new System.Drawing.Size(700, 295);
-            this.textBoxTieuChi.TabIndex = 16;
             // 
             // frmTraCuuThongTin
             // 

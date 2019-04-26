@@ -37,6 +37,18 @@ namespace CRM02
             return list;
         }
 
+        public ClassNhanVien LoadUserById(string id)
+        {
+            ClassNhanVien result = new ClassNhanVien();
+       
+            string query = "select tendangnhap,tennguoidung,hinhanh from nguoidung where tendangnhap = '"+ id +"'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            result =   new ClassNhanVien(data.Rows[0]);
+            
+            return result;
+        }
+
         public bool DangNhap(string tendangnhap, string matkhau)
         {
 
