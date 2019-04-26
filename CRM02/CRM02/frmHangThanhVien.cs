@@ -17,6 +17,16 @@ namespace CRM02
             InitializeComponent();
             LoadDataHangTV();
         }
+        private static frmHangThanhVien _singleton;
+
+        public static frmHangThanhVien CreateInstance()
+        {
+            if (_singleton == null)
+            {
+                _singleton = new frmHangThanhVien();
+            }
+            return _singleton;
+        }
 
         #region Method
 

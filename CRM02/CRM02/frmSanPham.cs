@@ -17,6 +17,16 @@ namespace CRM02
             InitializeComponent();
             LoadDataSanPham();
         }
+        private static frmSanPham _singleton;
+
+        public static frmSanPham CreateInstance()
+        {
+            if (_singleton == null)
+            {
+                _singleton = new frmSanPham();
+            }
+            return _singleton;
+        }
 
         #region Method
 

@@ -17,6 +17,16 @@ namespace CRM02
             InitializeComponent();
             LoadDataDonHang();
         }
+        private static frmDonHang _singleton;
+
+        public static frmDonHang CreateInstance()
+        {
+            if (_singleton == null)
+            {
+                _singleton = new frmDonHang();
+            }
+            return _singleton;
+        }
         #region Method
 
         private void LoadDataDonHang()

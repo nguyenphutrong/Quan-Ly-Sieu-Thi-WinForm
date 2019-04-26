@@ -18,6 +18,16 @@ namespace CRM02
             HienThiTieuChiThangHang();
             ClearText();
         }
+        private static frmTraCuuThongTin _singleton;
+
+        public static frmTraCuuThongTin CreateInstance()
+        {
+            if (_singleton == null)
+            {
+                _singleton = new frmTraCuuThongTin();
+            }
+            return _singleton;
+        }
 
         private void HienThiTieuChiThangHang()
         {

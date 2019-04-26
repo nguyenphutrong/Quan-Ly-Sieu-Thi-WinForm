@@ -20,10 +20,19 @@ namespace CRM02
             FillCombobox();          
         }
 
+        private static frmKhachHang _singleton;
+
+        public static frmKhachHang CreateInstance()
+        {
+            if (_singleton == null)
+            {
+                _singleton = new frmKhachHang();
+            }
+            return _singleton;
+        }
+
         private void LoadDataKhachHang()
         {
-
-
             List<ClassKhachHang> list = ClassQuanLyKhachHang.Intance.LoadDanhSachKhachHang();
 
             dataGridView1.DataSource = list;

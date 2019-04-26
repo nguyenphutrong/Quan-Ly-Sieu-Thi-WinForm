@@ -17,6 +17,16 @@ namespace CRM02
             InitializeComponent();
             LoadDataNhanVien();
         }
+        private static frmNhanVien _singleton;
+
+        public static frmNhanVien CreateInstance()
+        {
+            if (_singleton == null)
+            {
+                _singleton = new frmNhanVien();
+            }
+            return _singleton;
+        }
 
         #region Method
 
