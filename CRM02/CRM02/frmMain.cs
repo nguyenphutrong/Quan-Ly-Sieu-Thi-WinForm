@@ -17,53 +17,59 @@ namespace CRM02
             InitializeComponent();
         }
 
-        private void mnuDangXuat_Click(object sender, EventArgs e)
+        private void btnBanHang_Click(object sender, EventArgs e)
+        {
+            panelHover.Location = btnBanHang.Location;
+        }
+
+        private void btnSanPham_Click(object sender, EventArgs e)
+        {
+            panelHover.Location = btnSanPham.Location;
+            frmSanPham frm = frmSanPham.CreateInstance();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void btnHoaDon_Click(object sender, EventArgs e)
+        {
+            panelHover.Location = btnHoaDon.Location;
+            frmDonHang frm = frmDonHang.CreateInstance();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+            panelHover.Location = btnKhachHang.Location;
+            frmKhachHang frm = frmKhachHang.CreateInstance();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void btnHangTV_Click(object sender, EventArgs e)
+        {
+            panelHover.Location = btnHangTV.Location;
+            frmHangThanhVien frm = frmHangThanhVien.CreateInstance();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void btnKiemDuyet_Click(object sender, EventArgs e)
+        {
+            panelHover.Location = btnKiemDuyet.Location;
+        }
+
+        private void btnNhanVien_Click(object sender, EventArgs e)
+        {
+            panelHover.Location = btnNhanVien.Location;
+            frmNhanVien frm = frmNhanVien.CreateInstance();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void mnuThoat_Click(object sender, EventArgs e)
-        {
-            //if (MessageBox.Show("Bạn có thực sự muốn thoát chương trình?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //{
-                this.Close();
-            //}
-            
-        }
-
-        private void mnuQLKH_Click(object sender, EventArgs e)
-        {
-            frmKhachHang frm = new frmKhachHang();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
-        private void mnuQLSP_Click(object sender, EventArgs e)
-        {
-            frmSanPham frm = new frmSanPham();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
-        private void mnuQLNV_Click(object sender, EventArgs e)
-        {
-            frmNhanVien frm = new frmNhanVien();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
-        private void mnuQLSH_Click(object sender, EventArgs e)
-        {
-            frmDonHang frm = new frmDonHang();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
-        private void mnuQLHangTV_Click(object sender, EventArgs e)
-        {
-            frmHangThanhVien frm = new frmHangThanhVien();
-            frm.MdiParent = this;
-            frm.Show();
         }
     }
 }

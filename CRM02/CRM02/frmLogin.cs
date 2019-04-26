@@ -60,7 +60,7 @@ namespace CRM02
 
         private void buttonTraCuuTT_Click(object sender, EventArgs e)
         {
-            frmTraCuuThongTin frm = new frmTraCuuThongTin();
+            frmTraCuuThongTin frm = frmTraCuuThongTin.CreateInstance();
             clearTextBox();            
             clearTextBox();
             frm.ShowDialog();
