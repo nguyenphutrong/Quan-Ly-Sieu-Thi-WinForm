@@ -57,5 +57,10 @@ namespace CRM02
             }
         }
         #endregion
+
+        private void frmNhanVien_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _singleton = null;
+        }
     }
 }

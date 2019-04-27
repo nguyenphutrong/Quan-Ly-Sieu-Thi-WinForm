@@ -60,5 +60,16 @@ namespace CRM02
             }
         }
         #endregion
+
+        private void frmSanPham_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
+
+        private void frmSanPham_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _singleton = null;
+
+        }
     }
 }

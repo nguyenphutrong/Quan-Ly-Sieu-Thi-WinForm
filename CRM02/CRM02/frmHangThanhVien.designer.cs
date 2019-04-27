@@ -152,7 +152,7 @@
             this.dataGridViewHTV.Name = "dataGridViewHTV";
             this.dataGridViewHTV.ReadOnly = true;
             this.dataGridViewHTV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewHTV.Size = new System.Drawing.Size(861, 614);
+            this.dataGridViewHTV.Size = new System.Drawing.Size(581, 561);
             this.dataGridViewHTV.TabIndex = 22;
             this.dataGridViewHTV.TabStop = false;
             this.dataGridViewHTV.SelectionChanged += new System.EventHandler(this.dataGridViewHTV_SelectionChanged);
@@ -196,7 +196,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(360, 614);
+            this.panel1.Size = new System.Drawing.Size(360, 561);
             this.panel1.TabIndex = 33;
             // 
             // button4
@@ -269,14 +269,14 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(360, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(861, 614);
+            this.panel2.Size = new System.Drawing.Size(581, 561);
             this.panel2.TabIndex = 34;
             // 
             // frmHangThanhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1221, 614);
+            this.ClientSize = new System.Drawing.Size(941, 561);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtMaDH);
@@ -289,6 +289,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hạng Thành Viên";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmHangThanhVien_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHTV)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

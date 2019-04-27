@@ -230,6 +230,8 @@
             this.Name = "frmSanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý Sản Phẩm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSanPham_FormClosed);
+            this.Scroll += new System.Windows.Forms.ScrollEventHandler(this.frmSanPham_Scroll);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

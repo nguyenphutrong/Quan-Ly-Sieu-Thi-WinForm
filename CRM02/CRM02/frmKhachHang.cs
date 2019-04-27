@@ -82,7 +82,7 @@ namespace CRM02
                 txtMaKH.Text = row.Cells[i++].Value.ToString();
                 txtTenKH.Text = row.Cells[i++].Value.ToString();
                 string ngaySinh = row.Cells[i++].Value.ToString();
-                string[] Words = ngaySinh.Split(new char[] { '/' });
+                string[] Words = ngaySinh.Split(new char[] { '-' });
                 int count = 0;
                 foreach (string Word in Words)
                 {
@@ -259,6 +259,11 @@ namespace CRM02
                     }
                 }                
             }
+        }
+
+        private void frmKhachHang_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _singleton = null;
         }
     }
 }

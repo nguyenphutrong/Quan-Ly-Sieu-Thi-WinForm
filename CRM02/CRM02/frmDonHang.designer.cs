@@ -295,6 +295,7 @@
             this.Name = "frmDonHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Đơn Hàng";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDonHang_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
