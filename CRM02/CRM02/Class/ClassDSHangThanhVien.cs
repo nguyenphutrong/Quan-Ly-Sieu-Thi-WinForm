@@ -50,6 +50,26 @@ namespace CRM02
             return item;
         }
 
+        public bool XoaHangThanhVien(string id)
+        {
+            string query = "delete from HangThanhVien where mahang='" + id + "'";
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
+        public bool ThemHangThanhVien(ClassHangThanhVien kh)
+        {
+            string query = String.Format("insert into HangThanhVien values('{0}','{1}','{2}','{3}')", kh.MaHang, kh.TenHang, kh.Dklenhang, kh.Quyenloi);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+        public bool SuaHangThanhVien(ClassHangThanhVien kh)
+        {
+            string query = String.Format("update HangThanhVien set tenhang='{0}', dieukienlenhang='{1}',quyenloi='{2}' where mahang='{3}'", kh.TenHang, kh.Dklenhang, kh.Quyenloi, kh.MaHang);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
 
     }
 }

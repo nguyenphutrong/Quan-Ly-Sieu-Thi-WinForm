@@ -82,7 +82,7 @@ namespace CRM02
                 txtMaKH.Text = row.Cells[i++].Value.ToString();
                 txtTenKH.Text = row.Cells[i++].Value.ToString();
                 string ngaySinh = row.Cells[i++].Value.ToString();
-                string[] Words = ngaySinh.Split(new char[] { '-' });
+                string[] Words = ngaySinh.Split(new char[] { '/' });
                 int count = 0;
                 foreach (string Word in Words)
                 {
@@ -182,7 +182,7 @@ namespace CRM02
             {
                 if (dataGridView1.SelectedRows == null)
                 {
-                    MessageBox.Show("Bạn chưa chọn sinh viên cần xóa","Thông báo");
+                    MessageBox.Show("Bạn chưa chọn khách hàng cần xóa","Thông báo");
                 }
                 else
                 {
@@ -204,7 +204,7 @@ namespace CRM02
         {
             if (dataGridView1.SelectedRows == null || txtMaKH.Text =="")
             {
-                MessageBox.Show("Bạn chưa chọn sinh viên cần sửa", "Thông báo");
+                MessageBox.Show("Bạn chưa chọn khách hàng cần sửa", "Thông báo");
             }
             else
             {
