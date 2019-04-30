@@ -57,6 +57,7 @@ namespace CRM02
         private void btnKiemDuyet_Click(object sender, EventArgs e)
         {
             panelHover.Location = btnKiemDuyet.Location;
+            HienThiForm(FormKiemDuyetLenHang.CreateInstance());
         }
 
         private void btnNhanVien_Click(object sender, EventArgs e)
