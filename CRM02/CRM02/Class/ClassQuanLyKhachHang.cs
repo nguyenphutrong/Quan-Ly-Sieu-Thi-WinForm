@@ -64,7 +64,12 @@ namespace CRM02
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
-
+        public bool SuaHangKhachHang(string makh ,string hangtemp)
+        {
+            string query = String.Format("update KhachHang set mahang='{0}' where makhachhang='{1}'", hangtemp, makh);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
 
     }
 }
