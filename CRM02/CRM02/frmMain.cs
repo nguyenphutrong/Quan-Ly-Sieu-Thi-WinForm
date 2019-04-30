@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,7 @@ namespace CRM02
     {
         public frmMain()
         {
-            InitializeComponent();
+            InitializeComponent();         
         }
 
         private void HienThiForm(Form frm)
@@ -28,6 +29,7 @@ namespace CRM02
         private void btnBanHang_Click(object sender, EventArgs e)
         {
             panelHover.Location = btnBanHang.Location;
+            HienThiForm(frmBanHang.CreateInstance());
         }
 
         private void btnSanPham_Click(object sender, EventArgs e)
@@ -73,6 +75,7 @@ namespace CRM02
         private void frmMain_Load(object sender, EventArgs e)
         {
             LoadDataUser();
+            HienThiForm(frmBanHang.CreateInstance());
         }
 
         private void LoadDataUser()
@@ -81,12 +84,7 @@ namespace CRM02
             labelUsername.Text = user.TenNhanVien;
             if (user.HinhAnh != null)
             {
-                //byte[] bytes = Encoding.ASCII.GetBytes(user.HinhAnh);
-                //MemoryStream ms = new MemoryStream(user.HinhAnh);
-                //ptbAvatar.Image = Image.FromStream(ms);
-                //ptbAvatar.Image = (Image)converter.ConvertFrom(user.HinhAnh);
                 byte[] bytes = user.HinhAnh;
-                //mStream.Write(bytes, 0, Convert.ToInt32(bytes.Length));
                 MemoryStream ms = new MemoryStream(bytes);
                 ptbAvatar.Image = Image.FromStream(ms);
 
