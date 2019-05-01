@@ -54,8 +54,6 @@ namespace CRM02
             foreach (DataGridViewRow item in dataGridView1.Rows)
             {
                 item.Cells[6].Value = ClassDSHangThanhVien.Intance.getDataById(item.Cells[6].Value.ToString()).TenHang;
-                //DateTime ngay = Convert.ToDateTime(item.Cells[2].Value.ToString());
-                //item.Cells[2].Value = ngay.ToString("dd/MM/yyyy");
             }
         }
 
@@ -225,6 +223,7 @@ namespace CRM02
         private void btnLuu_Click(object sender, EventArgs e)
         {
             string sNgaySinh = cboMonth.Text + "/" + cboDay.Text + "/" + cboYear.Text;
+            //string sNgaySinh = cboDay.Text + "/" + cboMonth.Text + "/" + cboYear.Text;
             ClassKhachHang kh = new ClassKhachHang(txtMaKH.Text, txtTenKH.Text, sNgaySinh, txtDiaChi.Text, txtDienThoai.Text, int.Parse(txtDiemThuong.Text), cboHangTV.SelectedValue.ToString(), txtNgayDK.Text);
             if ((kh.MaKH == "") || (kh.HoTen == "") || (kh.NgaySinh == "") || (kh.DiaChi == "") || (kh.DienThoai == "") || (kh.HangThanhVien == ""))
             {

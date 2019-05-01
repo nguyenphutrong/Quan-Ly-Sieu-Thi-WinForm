@@ -70,7 +70,11 @@ namespace CRM02
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Bạn có chắc muốn thoát?","Thông báo",MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            
         }
 
         private void frmMain_Load(object sender, EventArgs e)

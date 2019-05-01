@@ -88,5 +88,16 @@ namespace CRM02
             labelDiemThuong.Text = "";
             dataGridView1.DataSource = null;
         }
+
+        private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (dataGridView1.CurrentRow.Index >=0)
+            {
+                frmChiTietDH frm = new frmChiTietDH();
+                frm.MaDH = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                frm.Text = "Chi tiết đơn hàng: " + dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                frm.ShowDialog();
+            }
+        }
     }
 }

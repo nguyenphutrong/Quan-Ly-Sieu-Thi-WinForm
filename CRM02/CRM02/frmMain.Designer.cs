@@ -201,7 +201,7 @@
             this.btnHoaDon.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnHoaDon.Size = new System.Drawing.Size(260, 52);
             this.btnHoaDon.TabIndex = 3;
-            this.btnHoaDon.Text = "Hóa đơn";
+            this.btnHoaDon.Text = "Đơn hàng";
             this.btnHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHoaDon.UseVisualStyleBackColor = true;

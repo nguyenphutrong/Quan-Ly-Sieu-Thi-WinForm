@@ -71,5 +71,16 @@ namespace CRM02
         {
             _singleton = null;
         }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow.Index >= 0)
+            {
+                frmChiTietDH frm = new frmChiTietDH();
+                frm.MaDH = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                frm.Text = "Chi tiết đơn hàng: " + dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                frm.ShowDialog();
+            }
+        }
     }
 }

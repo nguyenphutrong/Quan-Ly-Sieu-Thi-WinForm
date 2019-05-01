@@ -35,6 +35,21 @@ namespace CRM02
             return list;
         }
 
+        public ClassSanPham GetDataById(string id)
+        {
+            ClassSanPham item = new ClassSanPham();
+
+            string query = "select * from sanpham where masanpham='"+ id +"'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            if (data.Rows.Count > 0)
+            {
+                item = new ClassSanPham(data.Rows[0]);
+            }
+            return item;
+        }
+
+
 
     }
 }
