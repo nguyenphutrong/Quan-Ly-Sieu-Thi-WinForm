@@ -14,7 +14,8 @@ namespace CRM02
     public partial class frmBanHang : Form
     {
         private List<ClassChiTietDH> list = new List<ClassChiTietDH>();
-        private string makh = "";        
+        private string makh = "";
+        private int diemthuong;
         public frmBanHang()
         {
             InitializeComponent();
@@ -80,6 +81,7 @@ namespace CRM02
                 {
                     lbTenKH.Text = khachhang.HoTen.ToUpper();
                     makh = khachhang.MaKH;
+                    diemthuong = khachhang.DiemThuong;
                     ClassHangThanhVien hang = ClassDSHangThanhVien.Intance.getDataById(khachhang.HangThanhVien);
                     txtGiamGia.Text = hang.Quyenloi;
                     tinhThanhTien();
@@ -160,6 +162,8 @@ namespace CRM02
                     {
                         bool b = ClassQuanLyChiTietDonHang.Intance.LuuDonHang(dh.MaDH, item.MaSanPham, item.SoLuong, item.DonGia);
                     }
+                    
+                    bool b1 = ClassQuanLyKhachHang.Intance.TichDiem(makh,diemthuong + int.Parse(txtThanhTien.Text, NumberStyles.Currency) / 1000);
                     MessageBox.Show("Lưu thành công", "Thông báo");
                     KhoiTaoDHMoi();
                 }

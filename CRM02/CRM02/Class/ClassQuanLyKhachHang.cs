@@ -70,6 +70,13 @@ namespace CRM02
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
+        public bool TichDiem(string id,int diem)
+        {
+            string query = String.Format("update KhachHang set diemthuong='{0}' where makhachhang='{1}'", diem,id);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+     
 
     }
 }
