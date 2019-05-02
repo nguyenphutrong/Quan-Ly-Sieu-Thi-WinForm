@@ -91,9 +91,14 @@ namespace CRM02
             {
                 byte[] bytes = user.HinhAnh;
                 MemoryStream ms = new MemoryStream(bytes);
-                ptbAvatar.Image = Image.FromStream(ms);
-
-
+                ptbAvatar.Image = Image.FromStream(ms);                
+            }
+            if (user.Maloai == "nv")
+            {
+                btnSanPham.Visible = false;
+                btnHangTV.Visible = false;
+                btnKiemDuyet.Visible = false;
+                btnNhanVien.Visible = false;
             }
 
         }

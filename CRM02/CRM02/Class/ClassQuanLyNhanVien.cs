@@ -41,7 +41,7 @@ namespace CRM02
         {
             ClassNhanVien result = new ClassNhanVien();
        
-            string query = "select tendangnhap,tennguoidung,hinhanh from nguoidung where tendangnhap = '"+ id +"'";
+            string query = "select tendangnhap,tennguoidung,hinhanh,maloai from nguoidung where tendangnhap = '"+ id +"'";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
             result =   new ClassNhanVien(data.Rows[0]);

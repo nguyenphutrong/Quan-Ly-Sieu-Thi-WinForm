@@ -15,13 +15,7 @@ namespace CRM02
         private string tenDangNhap;
         private string tenNhanVien;
         private byte[] hinhAnh;
-
-        public ClassNhanVien(string tenDangNhap, string tenNhanVien,byte[] hinhAnh)
-        {
-            this.tenDangNhap = tenDangNhap;
-            this.tenNhanVien = tenNhanVien;
-            this.hinhAnh = hinhAnh;
-        }
+        private string maloai;
 
         public ClassNhanVien() { }
       
@@ -29,6 +23,7 @@ namespace CRM02
         public string TenDangNhap { get => tenDangNhap; set => tenDangNhap = value; }
         public string TenNhanVien { get => tenNhanVien; set => tenNhanVien = value; }
         public byte[] HinhAnh { get => hinhAnh; set => hinhAnh = value; }
+        public string Maloai { get => maloai; set => maloai = value; }
 
         public ClassNhanVien(DataRow row)
         {
@@ -40,10 +35,15 @@ namespace CRM02
                 this.HinhAnh = (byte[])row["hinhanh"];
             }
             catch (Exception) { }
+            this.Maloai = row["maloai"].ToString();
         }
 
-
-
-
+        public ClassNhanVien(string tenDangNhap, string tenNhanVien, byte[] hinhAnh, string maloai)
+        {
+            this.tenDangNhap = tenDangNhap;
+            this.tenNhanVien = tenNhanVien;
+            this.hinhAnh = hinhAnh;
+            this.maloai = maloai;
+        }
     }
 }
