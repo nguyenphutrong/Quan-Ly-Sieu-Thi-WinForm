@@ -6,7 +6,7 @@
 - GVHĐ: Lương Vĩ Minh
 - Họ tên: Nguyễn Phú Trọng
 - MSSV: LTC075A09
-- Email: nguyenphutrong.12a@gmail.com
+- Email: nguyenphutrong.dev@gmail.com
 ### Mô tả đồ án:
 - Mã đồ án / Mã nhóm: **CRM02**
 - Số lượng sinh viên: 3 sinh viên
